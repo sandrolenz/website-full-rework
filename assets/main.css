@@ -186,10 +186,23 @@ body {
   background-color: rgb(var(--blue-rgb));
 }
 
+/* -- About -- */
+
+body.about {
+  background-image: url(./img/about.webp);
+  background-repeat: no-repeat;
+  background-position: right 0 bottom 0;
+  background-size: 45vh;
+}
+
 /* -- Spacers -- */
 
 .spacer-35h {
   width: 35px;
+}
+
+.spacer-15v {
+  height: 15px;
 }
 
 .spacer-35v {

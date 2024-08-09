@@ -186,3 +186,16 @@ body {
   background-color: rgb(var(--blue-rgb));
 }
 
+/* -- Spacers -- */
+
+.spacer-35h {
+  width: 35px;
+}
+
+.spacer-35v {
+  height: 35px;
+}
+
+.spacer-50v {
+  height: 50px;
+}

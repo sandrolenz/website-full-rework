@@ -191,8 +191,7 @@ body {
 body.about {
   background-image: url(./img/about.webp);
   background-repeat: no-repeat;
-  background-position: right 0 bottom 0;
-  background-size: 45vh;
+  background-position: 0px; 
 }
 
 /* -- Spacers -- */

@@ -1,0 +1,169 @@
+/* -- Global -- */
+
+:root {
+  --white-rgb: 241, 250, 255;
+  --gray-rgb: 212, 212, 212;
+  --blue-rgb: 105, 130, 145;
+  --navy-rgb: 11, 36, 51;
+}
+
+@font-face {
+  font-family: "Urbanist";
+  src: url("./fonts/Urbanist-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./fonts/Oswald-VariableFont_wght.ttf");
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Urbanist", sans-serif;
+  color: rgb(var(--white-rgb));
+  background: rgb(var(--navy-rgb));
+  overflow: hidden;
+  perspective: 2000px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* -- Nav -- */
+
+#nav {
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.5rem;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 1rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.meta-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.meta-link > :is(span, a) {
+  font-size: 2rem;
+  color: rgb(var(--white-rgb));
+}
+
+.meta-link > .label {
+  text-align: right;
+}
+
+.meta-link > a {
+  text-decoration: none;
+  outline: none;
+}
+
+.meta-link > a:is(:hover, :focus) {
+  color: rgb(var(--gray-rgb));
+}
+
+.meta-link > a > i {
+  height: 1rem;
+  line-height: 1rem;
+}
+
+.meta-link > .active {
+  color: rgb(var(--blue-rgb));
+  pointer-events: none;
+}
+
+/* -- Content -- */
+
+.main-title {
+  font-size: 7rem;
+  font-weight: 800;
+}
+
+.sub-title {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.textblock {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* -- Home -- */
+
+#overlay-home {
+  z-index: 99;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  pointer-events: none;
+}
+
+#overlay-home > .text {
+  display: flex;
+  flex-direction: column;
+}
+
+#overlay-home > .profile-img {
+  height: 30%;
+  border-radius: 50%;
+  border: 10px solid rgb(var(--white-rgb));
+}
+
+#container {
+  z-index: 1;
+  width: 140rem;
+  aspect-ratio: 1;
+  display: grid;
+  grid-template-rows: repeat(40, 1fr);
+  grid-template-columns: repeat(40, 1fr);
+  position: absolute;
+  transform: rotateX(50deg) rotateY(-5deg) rotateZ(20deg) scale(1.25);
+}
+
+#container:after,
+#container:before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  pointer-events: none;
+}
+
+#container:before {
+  z-index: 2;
+  background-image: url("./img/plus-pattern-center.webp");
+  background-size: 5%;
+  background-repeat: repeat;
+  opacity: 0.25;
+}
+
+#container:after {
+  z-index: 3;
+  background: radial-gradient(circle, transparent 25%, rgb(var(--navy-rgb)) 80%);
+}
+
+.tile {
+  z-index: 2;
+  border: 1px solid rgb(255 255 255 / 10%);
+  transition: background-color 2000ms;
+}
+
+.tile:hover {
+  transition-duration: 0ms;
+  background-color: rgb(var(--blue-rgb));
+}
+

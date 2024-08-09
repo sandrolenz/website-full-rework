@@ -38,7 +38,7 @@ body {
 
 /* -- Nav -- */
 
-#nav {
+.nav {
   z-index: 100;
   display: flex;
   flex-direction: row;
@@ -87,22 +87,22 @@ body {
 
 /* -- Content -- */
 
-#content {
+.content {
   z-index: 99;
   display: flex;
   flex-direction: column;
 }
 
-#content > :is(span, a) {
+.content > :is(span, a) {
   color: rgb(var(--white-rgb));
 }
 
-#content > a.textblock-link {
+.content > a.textblock-link {
   text-decoration: none;
   outline: none;
 }
 
-#content > a.textblock-link:is(:hover, :focus) {
+.content > a.textblock-link:is(:hover, :focus) {
   color: rgb(var(--gray-rgb));
 }
 
